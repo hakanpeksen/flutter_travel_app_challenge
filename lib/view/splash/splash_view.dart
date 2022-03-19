@@ -31,7 +31,6 @@ class _SplashViewState extends SplashViewModel {
       child: Column(children: [
         Expanded(
             child: PageView.builder(
-                controller: pageViewController,
                 itemCount: SplashModels.splashItems.length,
                 onPageChanged: (value) {
                   changeIndex(value);

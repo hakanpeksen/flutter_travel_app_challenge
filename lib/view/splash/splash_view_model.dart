@@ -9,8 +9,6 @@ abstract class SplashViewModel extends State<SplashView> {
 
   bool get isLastPage => selectedIndex == SplashModels.splashItems.length - 1;
 
-  final pageViewController = PageController();
-
   void changeIndex(int value) {
     selectedIndex = value;
     setState(() {});
