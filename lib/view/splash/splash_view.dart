@@ -66,7 +66,7 @@ class _SplashViewState extends SplashViewModel {
     return Visibility(
       visible: isLastPage,
       child: ElevatedButtonIcon(
-          onPressed: buttonControl,
+          onPressed: goToView,
           label: CustomText.bodyText1(TextConstant.getStartedText, context: context)),
     );
   }

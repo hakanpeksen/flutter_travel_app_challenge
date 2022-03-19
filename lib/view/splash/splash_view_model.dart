@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../home/home_view.dart';
 import 'splash_model.dart';
 import 'splash_view.dart';
-import 'package:kartal/kartal.dart';
 
 abstract class SplashViewModel extends State<SplashView> {
   int selectedIndex = 0;
@@ -17,13 +16,8 @@ abstract class SplashViewModel extends State<SplashView> {
     setState(() {});
   }
 
-  void buttonControl() {
-    if (pageViewController.page != SplashModels.splashItems.length - 1) {
-      pageViewController.animateToPage((pageViewController.page!.toInt() + 1),
-          duration: context.durationNormal, curve: Curves.easeOutSine);
-    } else {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (BuildContext context) => const HomeView()));
-    }
+  void goToView() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (BuildContext context) => const HomeView()));
   }
 }
