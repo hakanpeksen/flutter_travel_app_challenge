@@ -67,7 +67,7 @@ class AppThemeLight {
 
         colorScheme: ThemeData.light().colorScheme.copyWith(
               primary: flamingo,
-              onPrimary: outerSpace,
+              onPrimary: scorpion, // onBoardSubTitle
               secondary: gray, // card location text,
               onSecondary: shark, // card name text, 52 review text
               error: outerSpace,

@@ -12,6 +12,11 @@ class TextConstant {
   static const String reviewButton = 'Review';
   static const String detailButton = 'Detail';
   static const String personText = '/Person';
+  static const String getStartedText = 'Get Started';
+
+  static const String onBoardTitle = 'Discover a Hotel & Resort to Book a Suitable Room';
+  static const String onBoardSubTitle =
+      'The hotel and resort business is one of the best and loyal business in the global market. We are the agency that helps to book you a good room in a suitable palace at a reasonable price.';
 
   // City
   static const String homeCitiesIndia = 'India';

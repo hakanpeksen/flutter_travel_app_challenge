@@ -3,6 +3,7 @@ library detail_view;
 import 'package:flutter/material.dart';
 import '../../components/custom_elevated_button.dart';
 import '../../components/custom_icon.dart';
+import '../../components/elevated_button_icon.dart';
 import '../../product/constants/image/png_constants.dart';
 import '../home/home_view.dart';
 import '/product/constants/text/text_constants.dart';
@@ -14,7 +15,7 @@ import 'package:kartal/kartal.dart';
 part 'widgets/detail_app_bar.dart';
 part 'widgets/listview_circle_photos.dart';
 part 'widgets/row_location.dart';
-part 'widgets/elevated_button_icon.dart';
+
 part 'widgets/row_textrich_price.dart';
 part 'widgets/content_textrich.dart';
 

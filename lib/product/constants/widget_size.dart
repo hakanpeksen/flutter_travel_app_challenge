@@ -20,6 +20,7 @@ class WidgetSize {
   static const double size33 = 33.0;
   static const double size35 = 35.0;
   static const double size40 = 40.0;
+  static const double size48 = 48.0;
   static const double size60 = 60.0;
   static const double size90 = 90.0;
 }

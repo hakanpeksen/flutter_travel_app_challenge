@@ -20,6 +20,8 @@ class CustomPadding extends EdgeInsets {
   const CustomPadding.mediumRight() : super.only(right: WidgetSize.size33);
   const CustomPadding.mediumHorizontal() : super.symmetric(horizontal: WidgetSize.size18);
 
+  const CustomPadding.highHorizontal() : super.symmetric(horizontal: WidgetSize.size48);
+
   const CustomPadding.top6() : super.only(top: WidgetSize.size6);
   const CustomPadding.right30() : super.only(right: WidgetSize.size30);
   const CustomPadding.left20() : super.only(left: WidgetSize.size20);

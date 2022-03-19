@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'product/init/theme/theme_manager.dart';
-import 'view/home/home_view.dart';
+import 'view/splash/splash_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       theme: AppThemeLight.instance.themeDataLight,
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }

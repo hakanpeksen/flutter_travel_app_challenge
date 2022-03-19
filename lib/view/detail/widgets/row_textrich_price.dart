@@ -18,7 +18,10 @@ class RowTextRichPrice extends StatelessWidget {
                 TextSpan(text: TextConstant.personText, style: context.textTheme.subtitle1)
               ])),
         ),
-        const ElevatedButtonIcon(),
+        ElevatedButtonIcon(
+          label: CustomText.bodyText1(TextConstant.continueText, context: context),
+          onPressed: () {},
+        )
       ],
     );
   }
