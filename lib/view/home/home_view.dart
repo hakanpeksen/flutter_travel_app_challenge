@@ -68,7 +68,7 @@ class HomeView extends StatelessWidget {
                   SizedBox(height: context.dynamicHeight(0.014)),
 
                   SizedBox(
-                      height: context.dynamicHeight(0.4),
+                      height: context.dynamicHeight(0.33),
                       width: context.width,
                       child: const ListViewProductCard()),
                   // Popoular Card
