@@ -7,7 +7,7 @@ class ProductCardBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const CustomPadding.mediumHorizontal(),
+      padding: const CustomPadding.onlyLRB(),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

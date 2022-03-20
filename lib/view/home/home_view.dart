@@ -58,20 +58,26 @@ class HomeView extends StatelessWidget {
                   // Header => Input
                   const HeaderPartInput(),
                   // Header => ListViewCities
-                  SizedBox(height: context.dynamicHeight(0.026)),
-                  SizedBox(height: context.dynamicHeight(0.13), child: const ListViewCities()),
+                  SizedBox(height: context.dynamicHeight(0.023)),
+                  //  0.13 den dynamicHeight(0.17) e gelince yatay da düzeltti
+                  SizedBox(height: context.dynamicHeight(0.17), child: const ListViewCities()),
                   // Product Card
                   CustomRowText(
                       child:
                           CustomText.commonText(TextConstant.homeOurProperties, context: context)),
                   SizedBox(height: context.dynamicHeight(0.014)),
-                  const ListViewProductCard(),
+
+                  SizedBox(
+                      height: context.dynamicHeight(0.4),
+                      width: context.width,
+                      child: const ListViewProductCard()),
                   // Popoular Card
                   SizedBox(height: context.dynamicHeight(0.014)),
                   CustomRowText(
                       child: CustomText.commonText(TextConstant.homePopoular, context: context)),
                   SizedBox(height: context.dynamicHeight(0.014)),
-                  SizedBox(height: context.dynamicHeight(0.17), child: const ListViewPopoularCard())
+                  //  0.17 den dynamicHeight(0.18) e gelince yatay da düzeltti
+                  SizedBox(height: context.dynamicHeight(0.18), child: const ListViewPopoularCard())
                 ])),
           ),
         ),
