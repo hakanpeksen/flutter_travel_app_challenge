@@ -5,21 +5,20 @@ class ListViewCirclePhotos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final horizontal = context.dynamicWidth(0.1);
+    // final vertical = context.dynamicWidth(0.1);
+
     return ListView.separated(
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(width: context.dynamicWidth(0.04));
+          return SizedBox(width: context.dynamicWidth(0.1));
         },
         scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
         itemCount: PngConstant.instance.circleCitiesList.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const CustomPadding.left20(),
-            child: Row(children: [
-              Column(children: [
-                Image.asset(PngConstant.instance.circleCitiesList[index].imageName.toImagePng),
-                context.emptySizedHeightBoxLow, // height: 0.01;
-              ])
-            ]),
+          return Image.asset(
+            PngConstant.instance.circleCitiesList[index].imageName.toImagePng,
+            fit: BoxFit.cover,
           );
         });
   }

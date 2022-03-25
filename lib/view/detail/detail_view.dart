@@ -20,6 +20,7 @@ part 'widgets/row_textrich_price.dart';
 part 'widgets/content_textrich.dart';
 
 part 'widgets/stack_image.dart';
+part 'widgets/aspect_ratio_detail_image.dart';
 
 class DetailView extends StatelessWidget {
   const DetailView({Key? key, required this.productIndex}) : super(key: key);
@@ -30,33 +31,48 @@ class DetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const DetailAppBar(),
-        body: Padding(
-          padding: const CustomPadding.onlyLTR(),
-          child: Column(children: [
-            // Image
-            Expanded(flex: 6, child: StackImage(productIndex: productIndex)),
-            // Circle List
-            SizedBox(height: context.dynamicHeight(0.09), child: const ListViewCirclePhotos()),
-            //  Buttons
-            Row(children: [
-              CustomElevatedButton(
-                  onPressed: () {},
-                  child: CustomText.buttonText(TextConstant.detailButton, context: context)),
-              context.emptySizedWidthBoxLow3x,
-              CustomElevatedButton(
-                onPressed: () {},
-                child: CustomText.buttonText(TextConstant.reviewButton, context: context),
-                buttonColor: context.colorScheme.background,
-              )
-            ]),
-            context.emptySizedHeightBoxLow, // height: 0.01
-            // Content
-            const ContentTextRich(),
-            const Spacer(),
-            // Footer
-            const Expanded(child: RowTextRichPrice()),
-            context.emptySizedHeightBoxLow3x
-          ]),
+        body: SingleChildScrollView(
+          child: SizedBox(
+            height: context.height,
+            child: Column(
+              children: [
+                //1 Image Alanı
+                const Expanded(flex: 6, child: AspectRatioImage()),
+                //2 ListView Circle  Alanı
+                Expanded(flex: context.isMediumScreen ? 2 : 1, child: const ListViewCirclePhotos()),
+                context.emptySizedHeightBoxLow, // height * 0.01
+                //3 Buttons
+                Expanded(
+                    child: Padding(
+                        padding: const CustomPadding.left30(),
+                        child: Row(children: [
+                          context.isMediumScreen ? const Spacer() : const SizedBox.shrink(),
+                          CustomElevatedButton(
+                              onPressed: () {},
+                              child: CustomText.buttonText(TextConstant.detailButton,
+                                  context: context)),
+                          context.emptySizedWidthBoxLow3x, // width: 0.03
+                          CustomElevatedButton(
+                            onPressed: () {},
+                            child:
+                                CustomText.buttonText(TextConstant.reviewButton, context: context),
+                            buttonColor: context.colorScheme.background,
+                          ),
+                          const Spacer(flex: 6),
+                        ]))),
+                context.emptySizedHeightBoxLow,
+                //4 Content
+                const Padding(
+                    padding: CustomPadding.medium28Horizontal(), child: ContentTextRich()),
+                context.emptySizedHeightBoxLow3x, // height * 0.03
+                //5 Price
+                const Expanded(
+                    child: Padding(
+                        padding: CustomPadding.medium28Horizontal(), child: RowTextRichPrice())),
+                context.emptySizedHeightBoxLow3x
+              ],
+            ),
+          ),
         ));
   }
 }
