@@ -37,7 +37,11 @@ class DetailView extends StatelessWidget {
             child: Column(
               children: [
                 //1 Image Alanı
-                const Expanded(flex: 6, child: AspectRatioImage()),
+                Expanded(
+                    flex: 6,
+                    child: AspectRatioImage(
+                      productIndex: productIndex,
+                    )),
                 //2 ListView Circle  Alanı
                 Expanded(flex: context.isMediumScreen ? 2 : 1, child: const ListViewCirclePhotos()),
                 context.emptySizedHeightBoxLow, // height * 0.01

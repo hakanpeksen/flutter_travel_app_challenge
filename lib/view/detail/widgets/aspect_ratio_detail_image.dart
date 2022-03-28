@@ -3,7 +3,8 @@ part of detail_view;
 //aspectRatio: 21 / 9,
 // aspectRatio: 4 / 3
 class AspectRatioImage extends StatelessWidget {
-  const AspectRatioImage({Key? key}) : super(key: key);
+  const AspectRatioImage({Key? key, required this.productIndex}) : super(key: key);
+  final int productIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,8 @@ class AspectRatioImage extends StatelessWidget {
       child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(PngConstant.instance.productImageList[1].imageName.toImagePng),
+                image: AssetImage(
+                    PngConstant.instance.productImageList[productIndex].imageName.toImagePng),
                 fit: BoxFit.fill),
           ),
           child: Padding(
